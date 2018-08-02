@@ -1,0 +1,23 @@
+===== Уставнока =====
+
+Python 2.7
+SoX v14.2.0
+зависимости из required.txt
+
+
+===== Настройка =====
+
+config.py - настройки с описанием
+
+Asterisk
+exten => 1000,1,AGI(recordsfio.py)
+
+PostgreSQL
+создать базу данных
+создать таблицу
+CREATE TABLE Fio (
+    time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    name VARCHAR NOT NULL, 
+    secondname VARCHAR NOT NULL, 
+    number VARCHAR NOT NULL);
+    

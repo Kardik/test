@@ -1,0 +1,22 @@
+===== Уставнока =====
+
+Python 2.7
+зависимости из required.txt
+для теста запускаем app.py или разворачиваем flask как положено uwsgi, fastcgi ...
+
+===== Настройка =====
+
+config.py - настройки с описанием
+
+Asterisk
+exten => 1000,1,AGI(recordsfio.py)
+
+PostgreSQL
+создать базу данных
+создать таблицу
+CREATE TABLE Fio (
+    time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    name VARCHAR NOT NULL, 
+    secondname VARCHAR NOT NULL, 
+    number VARCHAR NOT NULL);
+    
